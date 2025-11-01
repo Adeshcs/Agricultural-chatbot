@@ -1,4 +1,4 @@
-<img width="2400" height="1600" alt="agriclimate_architecture" src="https://github.com/user-attachments/assets/740c4e1a-0c5c-43e2-a75c-9141418957b4" />AgriClimate Q&A System: Intelligent Agricultural Data Assistant for India
+AgriClimate Q&A System: Intelligent Agricultural Data Assistant for India
 Executive Summary
 I have successfully designed and built a functional, end-to-end prototype of an intelligent Q&A system that sources information directly from the live data.gov.in portal and India Meteorological Department (IMD) to answer complex, natural language questions about India's agricultural economy and its relationship with climate patterns.​
 
