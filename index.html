@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgriClimate Q&A - India's Agricultural Intelligence</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Landing Page -->
+    <div id="landing-page" class="page active">
+        <div class="landing-container">
+            <div class="landing-header">
+                <div class="logo">🌾</div>
+                <h1>AgriClimate Q&A</h1>
+                <p class="subtitle">India's Agricultural Intelligence System</p>
+            </div>
+            
+            <div class="landing-content">
+                <div class="hero-section">
+                    <h2>Ask Questions About India's Agriculture &amp; Climate</h2>
+                    <p class="hero-description">
+                        Powered by real-time data from <strong>data.gov.in</strong> and the 
+                        <strong>India Meteorological Department</strong>, this intelligent system 
+                        helps you understand the intricate relationship between climate patterns 
+                        and agricultural productivity across Indian states.
+                    </p>
+                </div>
+
+                <div class="capabilities-grid">
+                    <div class="capability-card">
+                        <span class="capability-icon">💬</span>
+                        <h3>Natural Language</h3>
+                        <p>Ask questions in plain English</p>
+                    </div>
+                    <div class="capability-card">
+                        <span class="capability-icon">🌐</span>
+                        <h3>Live Data</h3>
+                        <p>Connected to government portals</p>
+                    </div>
+                    <div class="capability-card">
+                        <span class="capability-icon">📊</span>
+                        <h3>Smart Analysis</h3>
+                        <p>AI-powered insights &amp; trends</p>
+                    </div>
+                    <div class="capability-card">
+                        <span class="capability-icon">🌦️</span>
+                        <h3>Climate Correlation</h3>
+                        <p>Weather impact on crops</p>
+                    </div>
+                </div>
+
+                <button class="btn btn--primary btn--lg get-started-btn" onclick="showMainInterface()">
+                    Get Started
+                    <span style="margin-left: 8px;">→</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Application Interface -->
+    <div id="main-interface" class="page">
+        <!-- Header -->
+        <header class="app-header">
+            <div class="header-content">
+                <div class="header-left">
+                    <span class="logo-small">🌾</span>
+                    <h1 class="app-title">AgriClimate Q&A</h1>
+                </div>
+                <nav class="header-nav">
+                    <button class="nav-btn active" onclick="showSection('chat')">Chat</button>
+                    <button class="nav-btn" onclick="showSection('features')">Features</button>
+                    <button class="nav-btn" onclick="showSection('about')">About</button>
+                </nav>
+            </div>
+        </header>
+
+        <div class="app-container">
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <div class="sidebar-section">
+                    <div class="status-indicator">
+                        <span class="status-dot"></span>
+                        <span class="status-text">Connected to data.gov.in</span>
+                    </div>
+                </div>
+
+                <div class="sidebar-section">
+                    <h3 class="sidebar-title">Quick Stats</h3>
+                    <div class="stats-card">
+                        <div class="stat-item">
+                            <span class="stat-value">10,000+</span>
+                            <span class="stat-label">Data Points</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value">35</span>
+                            <span class="stat-label">States/UTs</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value">50+</span>
+                            <span class="stat-label">Crop Types</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sidebar-section">
+                    <h3 class="sidebar-title">Example Questions</h3>
+                    <div class="example-questions">
+                        <button class="example-question" onclick="askExample(this)">
+                            What was rice production in Maharashtra in 2022-23?
+                        </button>
+                        <button class="example-question" onclick="askExample(this)">
+                            Compare wheat yields between Punjab and Uttar Pradesh
+                        </button>
+                        <button class="example-question" onclick="askExample(this)">
+                            How much rainfall did Punjab receive in 2023?
+                        </button>
+                        <button class="example-question" onclick="askExample(this)">
+                            Show me crop production trends for the last 3 years
+                        </button>
+                        <button class="example-question" onclick="askExample(this)">
+                            Which state has the highest wheat productivity?
+                        </button>
+                        <button class="example-question" onclick="askExample(this)">
+                            How does climate affect rice cultivation?
+                        </button>
+                    </div>
+                </div>
+
+                <div class="sidebar-section">
+                    <h3 class="sidebar-title">Data Sources</h3>
+                    <div class="data-sources">
+                        <div class="source-item">
+                            <span class="source-icon">🏛️</span>
+                            <div>
+                                <div class="source-name">Ministry of Agriculture</div>
+                                <div class="source-detail">Crop production data</div>
+                            </div>
+                        </div>
+                        <div class="source-item">
+                            <span class="source-icon">🌡️</span>
+                            <div>
+                                <div class="source-name">IMD</div>
+                                <div class="source-detail">Climate &amp; weather data</div>
+                            </div>
+                        </div>
+                        <div class="source-update">Last updated: Nov 01, 2025</div>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Main Content Area -->
+            <main class="main-content">
+                <!-- Chat Section -->
+                <section id="chat-section" class="content-section active">
+                    <div class="chat-container">
+                        <div id="chat-messages" class="chat-messages">
+                            <div class="message bot-message">
+                                <div class="message-avatar">🤖</div>
+                                <div class="message-content">
+                                    <div class="message-text">
+                                        Hello! I'm your AgriClimate assistant. I can help you explore India's agricultural data and climate patterns. Ask me anything about crop production, yields, climate trends, or state-wise comparisons!
+                                    </div>
+                                    <div class="message-time">9:00 PM</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="chat-input-container">
+                            <button class="clear-chat-btn" onclick="clearChat()" title="Clear conversation">
+                                🗑️
+                            </button>
+                            <input 
+                                type="text" 
+                                id="chat-input" 
+                                class="chat-input" 
+                                placeholder="Ask a question about agriculture or climate..."
+                                onkeypress="handleKeyPress(event)"
+                            />
+                            <button class="send-btn" onclick="sendMessage()">
+                                <span>Send</span>
+                                <span class="send-icon">➤</span>
+                            </button>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Features Section -->
+                <section id="features-section" class="content-section">
+                    <div class="section-content">
+                        <h2>Key Features</h2>
+                        <p class="section-description">
+                            Our intelligent Q&A system combines advanced natural language processing 
+                            with comprehensive government data to provide actionable insights.
+                        </p>
+
+                        <div class="features-grid">
+                            <div class="feature-card">
+                                <div class="feature-icon">💬</div>
+                                <h3>Natural Language Processing</h3>
+                                <p>Ask questions in plain English and get intelligent, context-aware responses. No need to learn complex query syntax.</p>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-icon">🌐</div>
+                                <h3>Live Government Data</h3>
+                                <p>Real-time access to data.gov.in portal and official agricultural statistics from Indian government sources.</p>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-icon">🌦️</div>
+                                <h3>Climate Analysis</h3>
+                                <p>Correlate weather patterns with crop yields to understand climate impact on agricultural productivity.</p>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-icon">📊</div>
+                                <h3>Multi-State Comparison</h3>
+                                <p>Compare agricultural data across different states and union territories for comprehensive regional analysis.</p>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-icon">📈</div>
+                                <h3>Historical Trends</h3>
+                                <p>Analyze multi-year patterns and trends to identify growth trajectories and seasonal variations.</p>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-icon">🤖</div>
+                                <h3>Expert Insights</h3>
+                                <p>AI-powered recommendations and insights based on comprehensive data analysis and pattern recognition.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- About Section -->
+                <section id="about-section" class="content-section">
+                    <div class="section-content">
+                        <h2>About This System</h2>
+                        
+                        <div class="about-card">
+                            <h3>🎯 Project Overview</h3>
+                            <p>
+                                AgriClimate Q&A is an intelligent information retrieval system that connects 
+                                users to India's agricultural and climate data through natural language queries. 
+                                Built as a prototype to demonstrate the power of RAG (Retrieval-Augmented Generation) 
+                                technology for domain-specific applications.
+                            </p>
+                        </div>
+
+                        <div class="about-card">
+                            <h3>🔧 Technical Stack</h3>
+                            <div class="tech-stack">
+                                <span class="tech-badge">Python 3.9+</span>
+                                <span class="tech-badge">LangChain RAG</span>
+                                <span class="tech-badge">OpenAI GPT-4</span>
+                                <span class="tech-badge">ChromaDB</span>
+                                <span class="tech-badge">Flask API</span>
+                                <span class="tech-badge">Chart.js</span>
+                                <span class="tech-badge">data.gov.in API</span>
+                                <span class="tech-badge">IMD Weather API</span>
+                            </div>
+                        </div>
+
+                        <div class="about-card">
+                            <h3>🔍 How RAG Works</h3>
+                            <ol class="rag-steps">
+                                <li>
+                                    <strong>Data Ingestion:</strong> Agricultural and climate data is fetched from 
+                                    government APIs and stored in a vector database.
+                                </li>
+                                <li>
+                                    <strong>Query Processing:</strong> User questions are converted into embeddings 
+                                    and semantically matched with relevant data.
+                                </li>
+                                <li>
+                                    <strong>Context Retrieval:</strong> The most relevant data points are retrieved 
+                                    from the database based on semantic similarity.
+                                </li>
+                                <li>
+                                    <strong>Answer Generation:</strong> Retrieved data is passed to an LLM which 
+                                    generates natural language responses with proper citations.
+                                </li>
+                            </ol>
+                        </div>
+
+                        <div class="about-card">
+                            <h3>📚 Data Sources</h3>
+                            <ul class="data-source-list">
+                                <li>
+                                    <strong>data.gov.in:</strong> Open Government Data Platform of India - 
+                                    providing agricultural production, area, and yield statistics.
+                                </li>
+                                <li>
+                                    <strong>India Meteorological Department (IMD):</strong> Official climate data 
+                                    including rainfall, temperature, and weather patterns.
+                                </li>
+                                <li>
+                                    <strong>Ministry of Agriculture &amp; Farmers Welfare:</strong> Crop-wise and 
+                                    state-wise production data updated annually.
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="about-card">
+                            <h3>💻 Developer Setup</h3>
+                            <pre class="code-block"><code># Clone the repository
+git clone https://github.com/your-repo/agriclimate-qa
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Set environment variables
+export OPENAI_API_KEY="your-key"
+export DATA_GOV_API_KEY="your-key"
+
+# Run the application
+python app.py</code></pre>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
