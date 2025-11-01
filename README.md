@@ -1,8 +1,10 @@
-AgriClimate Q&A System: Intelligent Agricultural Data Assistant for India
+<img width="2400" height="1600" alt="agriclimate_architecture" src="https://github.com/user-attachments/assets/740c4e1a-0c5c-43e2-a75c-9141418957b4" />AgriClimate Q&A System: Intelligent Agricultural Data Assistant for India
 Executive Summary
 I have successfully designed and built a functional, end-to-end prototype of an intelligent Q&A system that sources information directly from the live data.gov.in portal and India Meteorological Department (IMD) to answer complex, natural language questions about India's agricultural economy and its relationship with climate patterns.​
 
 The system leverages Retrieval-Augmented Generation (RAG) technology, combining vector database search with large language models to provide accurate, cited, and contextual answers to agricultural queries.​
+
+<img width="2400" height="1600" alt="agriclimate_architecture" src="https://github.com/user-attachments/assets/6e41b8df-12b0-408f-9f05-383a46ee3668" />
 
 System architecture flowchart showing the end-to-end data flow from government APIs through RAG processing to user interface
 System Architecture & Technology Stack
